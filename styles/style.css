@@ -89,7 +89,7 @@ h1 {
   border-radius: 50%;
   z-index: 1;
 }
-.circle-content svg #Opaque_Ring{
+.circle-content svg #Opaque_Ring {
   transition: all 1s;
 }
 .left-text {
@@ -102,12 +102,12 @@ h1 {
   top: 75%;
   overflow: hidden;
 }
-.label-content{
-  top:60%;
+.label-content {
+  top: 60%;
 }
-.label-img{
+.label-img {
   padding-bottom: 30px;
-  opacity: .8;
+  opacity: 0.8;
 }
 .options button {
   background-color: transparent;
@@ -421,24 +421,24 @@ h1 {
     left: 0;
     top: 20%;
   }
-  
-  .section .lower-content .soon-btn{
+
+  .section .lower-content .soon-btn {
     background: white;
     color: black;
     padding: 5px 10px;
     border-radius: 100px;
   }
-  .section .label-content{
+  .section .label-content {
     left: 0;
     overflow: visible;
   }
-  .section .label-img{
-    width: clamp(250px,20vw,200px);
+  .section .label-img {
+    width: clamp(250px, 20vw, 200px);
     opacity: 1;
-padding: 0;
-top: -90px;
-position: absolute;
-z-index: 4;
+    padding: 0;
+    top: -90px;
+    position: absolute;
+    z-index: 4;
   }
 
   .skip-btn {
@@ -507,7 +507,7 @@ z-index: 4;
   /* THIRD SECTION END */
 
   /* FOURTH SECTION START */
-  .fourth-section .image{
+  .fourth-section .image {
     overflow: hidden;
   }
   .fourth-section .image img {
