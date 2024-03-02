@@ -102,7 +102,13 @@ h1 {
   top: 75%;
   overflow: hidden;
 }
-
+.label-content{
+  top:60%;
+}
+.label-img{
+  padding-bottom: 30px;
+  opacity: .8;
+}
 .options button {
   background-color: transparent;
   border: none;
@@ -415,6 +421,25 @@ h1 {
     left: 0;
     top: 20%;
   }
+  
+  .section .lower-content .soon-btn{
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 100px;
+  }
+  .section .label-content{
+    left: 0;
+    overflow: visible;
+  }
+  .section .label-img{
+    width: clamp(250px,20vw,200px);
+    opacity: 1;
+padding: 0;
+top: -90px;
+position: absolute;
+z-index: 4;
+  }
 
   .skip-btn {
     display: none;
@@ -442,7 +467,7 @@ h1 {
     display: inherit;
   }
   .pizza-box {
-    top: 30px;
+    top: 0;
   }
   /* FIRST SECTION END */
 
@@ -472,7 +497,7 @@ h1 {
   }
   .third-section .left-img {
     right: 20px;
-    top: 30px;
+    top: 0;
   }
   .third-section .right-img {
     left: 20px;
@@ -482,17 +507,16 @@ h1 {
   /* THIRD SECTION END */
 
   /* FOURTH SECTION START */
-  .fourth-section .image,
-  .fourth-section .content {
+  .fourth-section .image{
     overflow: hidden;
   }
   .fourth-section .image img {
     width: 45%;
-    height: 70%;
+    height: 90%;
   }
   .fourth-section .music1,
   .fourth-section .music2 {
-    top: 38%;
+    top: 20%;
   }
   .fourth-section .music2 {
     right: 20px;
@@ -504,8 +528,7 @@ h1 {
   /* FOURTH SECTION END */
 
   /*SIXTH SECTION START*/
-  .sixth-section .image,
-  .sixth-section .content {
+  .sixth-section .image {
     overflow: hidden;
   }
   .sixth-section .image img {
