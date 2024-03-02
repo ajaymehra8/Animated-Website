@@ -18,6 +18,7 @@ function removeAosAttribute() {
 
 const carouselBtns = document.querySelectorAll(".carousel-buttons input");
 const sections = document.querySelectorAll("section");
+const optionBtn=document.querySelectorAll(".options>button:first-child");
 
 let currentIndex = 0;
 let sectionsViewed = 0;
@@ -38,18 +39,19 @@ const scrollToNextSection = () => {
 
 // Check width on initial load
 if (window.innerWidth < maxWidthToRemoveAos) {
-  autoScrollInterval = setInterval(scrollToNextSection, 2000);
+  autoScrollInterval = setInterval(scrollToNextSection, 5000);
 
   removeAosAttribute();
+}else{
+  clearInterval(autoScrollInterval);
+
 }
 
 // Check width on window resize
 window.addEventListener("resize", function () {
-  console.log(window.innerWidth + " inner width");
 
   if (window.innerWidth < maxWidthToRemoveAos) {
     // Set an interval for auto-scrolling (change the delay as needed)
-    autoScrollInterval = setInterval(scrollToNextSection, 2000);
     removeAosAttribute();
   }
 });
@@ -146,9 +148,15 @@ document.addEventListener("scroll", () => {
 
   // Set colors for dots and lines in the active section
   if (currentSection) {
+    const optionBtn=currentSection.querySelector(".options>button:first-child");
     const currentSvg = currentSection.querySelector(".transring");
     const sectionId = currentSection.id; // section ID is "section1", "section2", etc.
 
+optionBtn.style.animation="scale .5s ease-in";//adding animation on option btn
+setTimeout(()=>{
+  optionBtn.style.animation="none";//removing animation for adding animation again when needed
+
+},5000)
     // Extract numeric part from the section ID using parseInt
     const sectionNumber = parseInt(sectionId.replace("section", ""), 10);
     const dots = currentSvg.querySelectorAll(".dots-nav .circ path");
